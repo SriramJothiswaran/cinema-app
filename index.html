@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Booking</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body ng-app="ticketApp" ng-controller="loginCtrl">
+<section class="intro-main">
+    <h1 class="heading">Welcome to online ticket booking system !</h1>
+    <form>
+    <div class="form-element">
+        <div>
+            <span>Username: &nbsp; &nbsp;<input type="text" ng-model="username"/></span>
+        </div>
+        <div class="form-password">
+            <span>Password: &nbsp; &nbsp;<input type="password" ng-model="password"/></span>
+        </div>
+        <div id="authFailed"></div>
+        <div class="button-span">
+            <button  class="btn btn-lg btn-primary" role="button" ng-click="authenticate(username,password)">Get Me In</button>
+        </div>
+    </div>
+    </form>
+</section>
+
+<script src="js/angular.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>

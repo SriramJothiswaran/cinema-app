@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body ng-app="ticketApp" ng-controller="mainCtrl">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+             <li class="active"><a href="main.html">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>User</a></li>
+            <li><a href="../index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<section ng-show="myValue" class="mainticket">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Pick your Seats</a></li>
+        <li role="presentation"><a href="#">Confirm Order</a></li>
+    </ul>
+        <h3><span class="glyphicon glyphicon-arrow-up"></span> Screen this way</h3>
+        <div class="seats-wrapper">
+            <span ng-repeat="x in seats">
+            <div ng-class="{'seat green' : !x.selected, 'seat yellow' : x.selected, 'seat red' : x.reserved == true}"
+                 ng-click="addSeat(x)">{{x.id}}</div>
+            </span>
+        </div>
+        <p>
+            You have selected {{count}} seat(s),
+            <span>Seat Number:</span>
+            <span ng-repeat="data in seatNumber | orderBy: seatNumber">
+             {{data}} {{$last ? '' : ($index==seatNumber.length-2) ? ' and ' : ', '}}
+        </span>
+        </p>
+
+        <div class="book">
+            <button type="button" class="btn btn-lg btn-danger" onclick=" location.href ='main.html'">Cancel Booking</button>
+            <button type="button" class="btn btn-lg btn-primary" ng-disabled="checkSeatSelected()" ng-click="proceed()">Proceed Booking
+            </button>
+
+        </div>
+</section>
+<section ng-show="seatConfirm" class="mainticket">
+    <ul class="nav nav-tabs">
+        <li role="presentation" ><a href="#">Pick your Seats</a></li>
+        <li role="presentation" class="active"><a href="#">Confirm Order</a></li>
+    </ul>
+    <h1 class="paymentHeading">Select Your Payment Method</h1>
+    <label class="radio-inline">
+       <h1><input type="radio" name="optradio" checked="checked">Cash On Counter</h1><br>
+        <h1> <input type="radio" name="optradio" disabled>Net Banking</h1><br>
+        <h1> <input type="radio" name="optradio" disabled>Credit/Debit Cards </h1>
+    </label>
+
+    <div class="book1">
+        <button  type="button" class="btn btn-lg btn-danger" onclick=" location.href ='main.html'" >Cancel Booking</button>
+        <button type="button" class="btn btn-lg btn-primary" ng-click="payment()" >Confirm Payment
+        </button>
+
+    </div>
+
+</section>
+
+<section ng-show="payConfirm">
+
+    <h3 class="bookConfirm">
+        Your seat(s)
+        <span>selection </span>
+        <span ng-repeat="data in seatNumber | orderBy: seatNumber">
+             {{data}} {{$last ? '' : ($index==seatNumber.length-2) ? ' and ' : ', '}}
+        </span> <span>has been booked. Pay and collect your tickets from the counter.</span>
+    </h3><br>
+    <h4><a href="main.html">Return Home</a> </h4>
+
+
+
+
+
+<script src="../js/angular.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>

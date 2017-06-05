@@ -1,0 +1,186 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+input {
+    color: #333 !important;
+    border-radius: 3px;
+    border: 0px;
+    height: 40px;
+}
+
+h4{
+    padding-left: 45%;
+}
+
+.intro-main {
+    background-color:  black;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    margin-top: -20px;
+    color: white;
+    text-align: center;
+}
+
+
+.form-heading {
+    text-align: center;
+    color: crimson;
+}
+
+.form-element {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 50px;
+    color: white;
+}
+
+.form-password {
+    padding-top: 10px;
+    padding-bottom: 2%;
+    margin-top: 20px;
+}
+
+.button-span {
+    margin-top: 60px;
+}
+
+.button-span .btn {
+    border: none;
+    border-radius: 2px;
+    padding: 10px 40px;
+    box-shadow: none;
+    background-color: #27ae60;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.nav-tabs{
+        width: 100%;
+}
+
+.nav-tabs>li {
+    text-transform: uppercase;
+    margin-bottom: -2px;
+}
+
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    border: none;
+    border-bottom: 1px solid #c0392b;
+    color: #c0392b;
+}
+
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus {
+    color: #c0392b;
+    background: none;
+    border: 1px solid transparent;
+}
+
+.nav-tabs>li.active>a {
+    color: #c0392b;
+    border: 0px;
+    border-bottom: 1px solid #c0392b;
+}
+
+.seats-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    margin:  20px;
+}
+
+.main-heading{
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.seats-wrapper .seat {
+    height: 50px;
+    width: 50px;
+    margin:  10px;
+    background-color: #c0392b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green{
+    background-color: #27ae60 !important;
+}
+
+.yellow{
+    background-color: yellow !important;
+}
+
+.red{
+    background-color: red !important;
+}
+
+.mainticket{
+    display: flex;
+    flex-direction:  column;
+    justify-content:  center;
+    align-items:  center;
+    width:  100%;
+}
+
+.mainticket h3{
+    margin-top: 30px;
+    color:  #585858;
+}
+
+#authFailed{
+    color: red;
+}
+
+.white{
+    color: white;
+}
+
+.poster{
+    text-align: center;
+}
+
+.book{
+    padding-top: 15px;
+}
+
+.book1{
+    padding-top: 75px;
+    letter-spacing: 40px;
+}
+
+
+input[type="radio"] {
+    margin-right: 0px;
+
+}
+
+.paymentHeading{
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.bookConfirm{
+    padding: 20% 0 0 15%;
+}
